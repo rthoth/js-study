@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<script type="text/javascript" src="../jquery/jquery-1.7.2.js"></script>
+</head>
+
+<body>
+
+	<button id="move_up">Move Up</button>
+	<button id="move_down">Move Down</button>
+	<button id="color">Change Color</button>
+	<button id="disappear">Disappear/Re-appear</button>
+	<div id="change_me">Make Me Do Stuff!</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function() { 
+
+			//$("button").hide(); //Select all button in page and ridden them
+
+			//$("button").click(function(){ alert('you clicked in some button');});
+
+			//$("button").css("background-color","white");
+
+			jQuery("#move_up").click( function() {
+				jQuery("#change_me").animate({top:30},200); 
+			});
+			
+			jQuery("#move_down").click( function() { 
+				jQuery("#change_me").animate({top:200},2000);
+			});
+			
+			jQuery("#color").click( function() {
+				jQuery("#change_me").css("color", "purple"); 
+			});
+			
+			$("#disappear").click( function() { 
+				$("#change_me").toggle("slow");
+			});
+		});	
+	</script>
+
+</body>
+
+</html>

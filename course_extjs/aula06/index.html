@@ -1,0 +1,58 @@
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+	<script type="text/javascript" src="../extjs/ext-all.js"></script>
+
+</head>
+
+<body>
+	<div id="botao01"></div>
+	<div id="botao02"></div>
+	<div id="botao03"></div>
+</body>
+
+	<script type="text/javascript">
+
+	Ext.define('MeuBotao',{
+		extend: 'Ext.button.Button',
+		
+		initComponent : function(){
+			//this.text = 'Meu Botao';
+			this.callParent();
+		}
+
+		
+	});
+
+	Ext.onReady(function(){
+
+		Ext.create('MeuBotao',{
+			text: 'WagnerButton',
+			renderTo: 'botao01', //renderiza na div do HTML
+			handler: function(){
+				alert('from WagnerButton');
+			}
+		});
+
+		Ext.create('MeuBotao',{
+			text: 'Sou bruto',
+			renderTo: 'botao02',
+			 menu      : [
+		        {text: 'Item 1'},
+		        {text: 'Item 2'},
+		        {text: 'Item 3'},
+		        {text: 'Item 4'}
+		    ]
+		});
+
+		var button = Ext.create('MeuBotao',{
+			text: 'Monica ta dormindo',
+			renderTo: 'botao03'
+		});	
+
+		button.text = 'Agora mudou o valor' ;
+	});
+	</script>
+
+</html>

@@ -1,0 +1,28 @@
+
+/** Elemento HTML identificado por tag **/
+div{
+	float:left; 
+	height:245px; 
+	text-align:left; 
+	border: solid #000 3px;
+} 
+
+/** Elemento HTML identificado por ID **/
+#header{
+	width:100%; 
+	border: 0px; 
+	height:50px;
+} 
+
+#main{
+	background-color: grey;
+}
+
+/** Elemento identificado por classe **/
+.guess_box{
+	height: 245px;
+}
+
+.my_hover{
+	border: solid #FF0000 3px;
+}
